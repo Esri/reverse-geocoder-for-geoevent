@@ -80,28 +80,12 @@ public class ReverseGeocoderProcessorDefinition extends GeoEventProcessorDefinit
 	@Override
 	public String getLabel()
 	{
-		/**
-		 * Note: by using the ${myBundle-symbolic-name.myProperty} notation, the framework will attempt to replace the
-		 * string with a localized string in your properties file.
-		 */
-		// return "${reversegeocode.gep.reversegeocode-processor.PROCESSOR_LABEL}";
-		return "Reverse Geocoder";
+		return "${com.esri.geoevent.processor.reverse-geocoder-processor.PROCESSOR_LABEL}";
 	}
 
 	@Override
 	public String getDescription()
 	{
-		/**
-		 * Note: by using the ${myBundle-symbolic-name.myProperty} notation, the framework will attempt to replace the
-		 * string with a localized string in your properties file.
-		 */
-		// return "${reversegeocode.gep.reversegeocode-processor.PROCESSOR_DESC}";
-		return "Attempts to reverse geocode the GeoEvent using the ArcGIS Online Geocode service.";
-	}
-
-	@Override
-	public String getContactInfo()
-	{
-		return "yourname@yourcompany.com";
+		return "${com.esri.geoevent.processor.reverse-geocoder-processor.PROCESSOR_DESC}";
 	}
 }
