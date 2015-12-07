@@ -4,7 +4,7 @@
 
 	<parent>
 		<groupId>com.esri.geoevent.parent</groupId>
-		<artifactId>geonames</artifactId>
+		<artifactId>reverse-geocoder</artifactId>
 		<version>10.3.0</version>
 	</parent>
 
