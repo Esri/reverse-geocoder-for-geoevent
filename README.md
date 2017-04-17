@@ -65,7 +65,3 @@ See the License for the specific language governing permissions and
 limitations under the License.
 
 A copy of the license is available in the repository's [license.txt](license.txt?raw=true) file.
-
-[](ArcGIS, GeoEvent, Extension, Processor)
-[](Esri Tags: ArcGIS GeoEvent Extension for Server)
-[](Esri Language: Java)
