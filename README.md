@@ -1,8 +1,8 @@
 # reverse-geocoder-for-geoevent
 
-ArcGIS GeoEvent Server sample Reverse Geocoder Processor for looking up the nearest street address using the GeoEvent's geometry and the ArcGIS Online World GeoCoding Service.
+ArcGIS GeoEvent Server sample Reverse Geocoder Processor for looking up the nearest street address using the GeoEvent's geometry and a geocode service. 
 
-The Reverse GeoCoder Processor can be used in a GeoEvent Service to take the geometry of the incoming GeoEvent and reverse geocode it against the ArcGIS Online World GeoCoding Service to find the nearest street address within a user-defined radius. It appends the fields of the nearest address, if any, to the GeoEvent, generating a new GeoEvent Definition.
+The Reverse Geocoder Processor can be used in a GeoEvent Service to take the geometry of the incoming point GeoEvent and reverse geocode it against the configured geocoding service to find the nearest street address within a user-defined radius. It appends the fields of the nearest address, if any, to the GeoEvent, generating a new GeoEvent Definition. By default it uses the ArcGIS Online World GeoCoding Service, but users can specify another. This use of the ArcGIS Online World Geocoding Service does not consume ArcGIS Online credits.
 
 ![App](reverse-geocoder-for-geoevent.jpg?raw=true)
 
