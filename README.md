@@ -1,13 +1,13 @@
 # reverse-geocoder-for-geoevent
 
-ArcGIS GeoEvent Server sample Reverse Geocoder Processor for looking up the nearest street address using the GeoEvent's geometry and the ArcGIS Online World GeoCoding Service.
+The Reverse Geocoder Processor for ArcGIS GeoEvent Server is a sample processor that can be used to look up the nearest street address by using the GeoEvent's geometry and the ArcGIS Online World Geocoding Service.
 
-The Reverse GeoCoder Processor can be used in a GeoEvent Service to take the geometry of the incoming GeoEvent and reverse geocode it against the ArcGIS Online World GeoCoding Service to find the nearest street address within a user-defined radius. It appends the fields of the nearest address, if any, to the GeoEvent, generating a new GeoEvent Definition.
+The Reverse Geocoder Processor can be used in a GeoEvent Service to take the geometry of the incoming GeoEvent and reverse geocode it against the ArcGIS Online World Geocoding Service to find the nearest street address within a user-defined radius. It appends the fields of the nearest address, if any, to the GeoEvent, generating a new GeoEvent Definition.
 
 ![App](reverse-geocoder-for-geoevent.jpg?raw=true)
 
 ## Features
-* Reverse GeoCoder Processor
+* Reverse Geocoder Processor
 
 ## Instructions
 
@@ -24,22 +24,21 @@ Installing the built jar files:
 
 * ArcGIS GeoEvent Server.
 * ArcGIS GeoEvent Server SDK.
-* Java JDK 1.7 or greater.
+* Java JDK 1.8 or greater.
 * Maven.
 
 ## Resources
 
-* [Download the connector's tutorial](http://www.arcgis.com/home/item.html?id=7eed835dc2044a6787799de4f7cd0e45) from the ArcGIS GeoEvent  Gallery
+* [Download the connector's tutorial](http://www.arcgis.com/home/item.html?id=7eed835dc2044a6787799de4f7cd0e45) from the ArcGIS GeoEvent Server Gallery
 * [ArcGIS GeoEvent Server Resources](http://links.esri.com/geoevent)
 * [ArcGIS Blog](http://blogs.esri.com/esri/arcgis/)
 * [twitter@esri](http://twitter.com/esri)
 
 ## See also
 
-* [ArcGIS Online Geocoding Service](https://geocode.arcgis.com/arcgis/index.html)
-* [Esri World Geocoding Service](https://developers.arcgis.com/en/features/geocoding/)
-* [ArcGIS REST API: World Geocoding Service - Reverse Geocode](https://developers.arcgis.com/rest/geocode/api-reference/geocoding-reverse-geocode.htm)
-* [World Geocoding](http://www.arcgis.com/home/item.html?id=305f2e55e67f4389bef269669fc2e284)
+* [ArcGIS World Geocoding Service](https://developers.arcgis.com/features/geocoding/)
+* [ArcGIS REST API: World Geocoding Service - Reverse Geocode](https://developers.arcgis.com/rest/services-reference/reverse-geocode.htm)
+* [World Geocoding Service on ArcGIS Online](http://www.arcgis.com/home/item.html?id=305f2e55e67f4389bef269669fc2e284)
 
 ## Issues
 
