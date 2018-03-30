@@ -146,7 +146,6 @@ public class ReverseGeocoderProcessor extends GeoEventProcessorBase
 		// The response format. Values: html | json | kmz 
 		// The default response format is html.
 		agolSearchFormat = "json"; 
-		//URL agolURL = new URL("http://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/reverseGeocode?location=" + Double.toString(lon) + "," + Double.toString(lat) + "&distance=" + Integer.toString(agolSearchDistance) + "&outSR=" + Integer.toString(wkid) + "&f=" + agolSearchFormat);
 		URL agolURL = new URL(geocodeServiceUrl + "?location=" + Double.toString(lon) + "," + Double.toString(lat) + "&distance=" + Integer.toString(agolSearchDistance) + "&outSR=" + Integer.toString(wkid) + "&f=" + agolSearchFormat);
 		
 		String addressJson = getReverseGeocode(agolURL);
