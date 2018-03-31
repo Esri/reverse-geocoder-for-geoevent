@@ -35,6 +35,7 @@ public class ReverseGeocoderProcessorDefinition extends GeoEventProcessorDefinit
 {
 	private static final BundleLogger	LOGGER													= BundleLoggerFactory.getLogger(ReverseGeocoderProcessorDefinition.class);
 	protected static final String			AGOL_SEARCHDISTANCE_PROPERTY		= "agolSearchDist";
+	protected static final String			GEOCODE_SERVICE_PROPERTY		= "geocodeServiceUrl";
 	protected static final String			NEWGEOEVENTDEFINITION_PROPERTY	= "newGeoEventDefinitionName";
 
 	public ReverseGeocoderProcessorDefinition()
@@ -43,6 +44,9 @@ public class ReverseGeocoderProcessorDefinition extends GeoEventProcessorDefinit
 		{
 			PropertyDefinition agolSearchDistanceProperty = new PropertyDefinition(AGOL_SEARCHDISTANCE_PROPERTY, PropertyType.Integer, 100, "ArcGIS Online Reverse Geocoder Search Radius (m)", "The distance from the geoevent's location within which a matching address should be searched.", true, false);
 			propertyDefinitions.put(AGOL_SEARCHDISTANCE_PROPERTY, agolSearchDistanceProperty);
+
+			PropertyDefinition geocodeServiceUrlProperty = new PropertyDefinition(GEOCODE_SERVICE_PROPERTY, PropertyType.String, "http://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/reverseGeocode", "ArcGIS Online Reverse Geocoder Search Radius (m)", "The distance from the geoevent's location within which a matching address should be searched.", true, false);
+			propertyDefinitions.put(GEOCODE_SERVICE_PROPERTY, geocodeServiceUrlProperty);
 
 			PropertyDefinition newGeoEventDefinitionNameProperty = new PropertyDefinition(NEWGEOEVENTDEFINITION_PROPERTY, PropertyType.String, "NewGeoEventDefinition", "Resulting GeoEvent Definition", "The incoming GeoEvent will be augmented with the address fields from the reverse geocode and a new GeoEvent Definition will be created.", true, false);
 			propertyDefinitions.put(NEWGEOEVENTDEFINITION_PROPERTY, newGeoEventDefinitionNameProperty);

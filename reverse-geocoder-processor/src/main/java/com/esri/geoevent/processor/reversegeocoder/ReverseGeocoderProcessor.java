@@ -75,6 +75,7 @@ public class ReverseGeocoderProcessor extends GeoEventProcessorBase
 	private Object										propertyLock	= new Object();
 	private int												agolSearchDistance;
 	private String										agolSearchFormat;
+	private String										geocodeServiceUrl;
 	private GeoEventCreator						geoEventCreator;
 	private String										newGeoEventDefinitionName;
 
@@ -93,6 +94,12 @@ public class ReverseGeocoderProcessor extends GeoEventProcessorBase
 			if (hasProperty(ReverseGeocoderProcessorDefinition.AGOL_SEARCHDISTANCE_PROPERTY))
 			{
 				agolSearchDistance = (int) getProperty(ReverseGeocoderProcessorDefinition.AGOL_SEARCHDISTANCE_PROPERTY).getValue();
+			}
+
+			geocodeServiceUrl = "http://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/reverseGeocode";
+			if (hasProperty(ReverseGeocoderProcessorDefinition.GEOCODE_SERVICE_PROPERTY))
+			{
+				geocodeServiceUrl = (String) getProperty(ReverseGeocoderProcessorDefinition.GEOCODE_SERVICE_PROPERTY).getValue();
 			}
 
 			newGeoEventDefinitionName = "NewGeoEventDefinition";
@@ -139,7 +146,8 @@ public class ReverseGeocoderProcessor extends GeoEventProcessorBase
 		// The response format. Values: html | json | kmz 
 		// The default response format is html.
 		agolSearchFormat = "json"; 
-		URL agolURL = new URL("http://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/reverseGeocode?location=" + Double.toString(lon) + "," + Double.toString(lat) + "&distance=" + Integer.toString(agolSearchDistance) + "&outSR=" + Integer.toString(wkid) + "&f=" + agolSearchFormat);
+		URL agolURL = new URL(geocodeServiceUrl + "?location=" + Double.toString(lon) + "," + Double.toString(lat) + "&distance=" + Integer.toString(agolSearchDistance) + "&outSR=" + Integer.toString(wkid) + "&f=" + agolSearchFormat);
+		
 		String addressJson = getReverseGeocode(agolURL);
 		GeoEvent agolStreetAddress = augmentGeoEventWithAddress(geoEvent, addressJson);
 		return agolStreetAddress;
